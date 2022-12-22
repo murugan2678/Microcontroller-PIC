@@ -78,8 +78,8 @@ void main()
 	uart_init();
 	while(1)
 	{
-		while(RCIF == 0);    //poll if RCIF is Empty
-		Rdata = RCREG;       //copy data from RCREG register to RData char variable
-		lcd_disp(Rdata);     //Display receive data on lcd
+		while(RCIF == 0);     //poll if RCIF is Empty
+		Rdata = RCREG;        //copy data from RCREG register to RData char variable
+		lcd_disp(Rdata);      //Display receive data on lcd
 	}
 }	
