@@ -1,5 +1,5 @@
 /*********************************************************************/
-/* Auther       : Murugan M                                   	  	 */
+/* Auther       : Murugan M                                   	     */
 /* Date         : 20/12/2022                                 	     */
 /* File name    : uart universal asynchronous recevier transmitter   */
 /* Description  : recevier only from lcd                             */
@@ -63,13 +63,13 @@ void lcd_init()
 	TRISD7 = 0;              //port-D pin #7 as output pin
 	__delay_ms(50);  
 	lcd_cmd(0X38);           //init 5X8-2 lin RETURN Home
-	lcd_cmd(0X0F);					 //display on,en_cursor,en_blink
+	lcd_cmd(0X0F);		 //display on,en_cursor,en_blink
 	lcd_cmd(0X0C);           //display on,en_cursor,en_blink
 	lcd_cmd(0X02);           //Return to Home
 	lcd_cmd(0X06);           //cursor++
 	lcd_cmd(0X80);           //set DDRAM
 	__delay_ms(50);
-	lcd_cmd(0X01);		     //clear display
+	lcd_cmd(0X01);		 //clear display
 }
 void main()
 {
