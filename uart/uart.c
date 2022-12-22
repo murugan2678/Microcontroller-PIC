@@ -1,6 +1,6 @@
 /**************************************************************************************/
-/* Auther       : Murugan M                                   	  					  */
-/* Date         : 15/12/2022                                 	    				  */
+/* Auther       : Murugan M                                   	                      */
+/* Date         : 15/12/2022                                 	                      */
 /* File name    : uart_universal asynchronous receiver transmitter                    */
 /* Description  : using sparg and txen,spen interrupt flag set this one transmitter   */
 /**************************************************************************************/
