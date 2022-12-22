@@ -33,7 +33,7 @@ void uart_init()
 void uart_tx(unsigned char val)
 {
 	TXREG = val;        //TX Transmit Buffer 
-	while(TXIF == 0);   //TX Transmit Buffer TX1F = 0;
+	while(TXIF == 0);   //TX Transmit Buffer  TX1F = 0;
 	TXIF = 0;           //TX Transmit IF Interrupt flag set
 }
 void main()
