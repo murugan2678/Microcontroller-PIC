@@ -1,5 +1,5 @@
 /******************************************************************************/
-/* Auther       : Murugan M                                   	  	          */
+/* Auther       : Murugan M                                   	  	      */
 /* Date         : 6/12/2022                                 	              */
 /* File name    : stepper motor led blink forward and reverse,half all route  */
 /* Description  : using for loop                                              */
@@ -18,19 +18,19 @@ char arr[] = {0X07,0X03,0X0B,0X09,0X0D,0X0C,0X0E,0X06};
 
 int main()
 {
-	TRISC = 0;
-	PORTC = 0X00;
+    TRISC = 0;
+    PORTC = 0X00;
     TRISD = 0;
 	
   while(1)
   {
 	 
-	 for(k=0; k<=12; k++)                   //forward route stepper motor
+	 for(k=0; k<=12; k++)                     //forward route stepper motor
 	  {
 		for(i=0; i<=8; i++)
 		{
-			RD5 = 1;                        //first led 1 means on 
-			RD4 = 0;                        //0 means off
+			RD5 = 1;                  //first led 1 means on 
+			RD4 = 0;                  //0 means off
 			RD3 = 0;
 			RD2 = 0;
 			PORTC = arr[i];
@@ -41,23 +41,23 @@ int main()
 	  
 	  for(k=0; k<=12; k++)
 	  {
-		 for(j=7; j>=0; j--)               //reverse route stepper motor
+		 for(j=7; j>=0; j--)              //reverse route stepper motor
 		 {
-			RD5 = 1;                       //first led 1 means on
-			RD4 = 0;                       //0 means off    
+			RD5 = 1;                  //first led 1 means on
+			RD4 = 0;                  //0 means off    
 			RD3 = 0;
 			RD2 = 0;
 			PORTC = arr[j];
 			__delay_ms(30);
 		 }
 	   }
-		 __delay_ms(1000);
+           __delay_ms(1000);
 	 
 	  for(k=0; k<50; k++)
 	  { 
 		  for(m=0; m<8; m++)              //forward route stepper motor
 		  {
-			RD5 = 1;                      //first led on 
+			RD5 = 1;                  //first led on 
 			RD4 = 0;
 			RD3 = 0;
 			RD2 = 0;
@@ -65,54 +65,51 @@ int main()
 			__delay_ms(30);
 		 }
 	   } 
-	  __delay_ms(1000);	 
+	   __delay_ms(1000);	 
 	  
 	  for(k=0; k<50; k++)
 	  { 
 		  for(n=7; n>=0; n--)            //reverse route stepper motor
 		  {
-			RD5 = 1;                     //first led 1 means on
-			RD4 = 0;                     //0 means off
+			RD5 = 1;                 //first led 1 means on
+			RD4 = 0;                 //0 means off
 			RD3 = 0;
 			RD2 = 0;
 			PORTC = arr[n];
 			__delay_ms(30);
 		 }
 	   } 
-	  __delay_ms(1000);	 
+	   __delay_ms(1000);	 
 	  
-	   
-	  	  	 
 	  for(k=0; k<=12; k++)
 	  {
 		  for(p=0; p<=8; p++)            //forward route stepper motor
 		  {
 			RD5 = 0;
-			RD4 = 1;                     //second led on
+			RD4 = 1;                 //second led on
 			RD3 = 0;
 			RD2 = 0;
 			PORTC = arr[p];
 			__delay_ms(30);
 		  }
 	   }
-	  __delay_ms(1000);
+	   __delay_ms(1000);
 		
-	  for(k=0; k<=12; k++)               //reverse route stepper motor
+	  for(k=0; k<=12; k++)                  //reverse route stepper motor
 	  {
 		  for(q=7; q>=0; q--)
 		  {
 			RD5 = 0;
-			RD4 = 1;                     //second led on
+			RD4 = 1;                //second led on
 			RD3 = 0;
 			RD2 = 0;
 			PORTC = arr[q];
 			__delay_ms(30);
 		  }
 	  }
-      __delay_ms(1000);
-      
-      
-      for(k=0; k<50; k++)
+          __delay_ms(1000);
+         
+         for(k=0; k<50; k++)
 	  { 
 		  for(r=0; r<8; r++)
 		  {
@@ -139,8 +136,7 @@ int main()
 		 }
 	   } 
 	  __delay_ms(1000);	 
-      
-      	
+        	
 	  for(k=0; k<=13; k++)
 	  {
 		  for(t=0; t<=8; t++)
@@ -152,8 +148,8 @@ int main()
 			PORTC = arr[t];
 			__delay_ms(30);
 		   }
-		}
-		__delay_ms(1000);
+	   }
+	   __delay_ms(1000);
 		
 	  for(k=0; k<=13; k++)
 	  {
@@ -167,7 +163,7 @@ int main()
 			__delay_ms(30);
 		  }
 	  }
-		__delay_ms(1000);
+	  __delay_ms(1000);
 		
 	  for(k=0; k<50; k++)
 	  {
@@ -180,8 +176,8 @@ int main()
 			PORTC = arr[z];
 			__delay_ms(30);
 		   }
-		}
-		__delay_ms(1000);
+	  }
+	  __delay_ms(1000);
 		
 	  for(k=0; k<50; k++)
 	  {
@@ -194,69 +190,63 @@ int main()
 			PORTC = arr[a];
 			__delay_ms(30);
 		  }
-		}
-		__delay_ms(1000);
-		
-		
-		
-		
-		
-		
-		for(k=0; k<=13; k++)
-		{
-			for(b=0; b<=8; b++)
-			{
-			  RD5 = 0;
-		      RD4 = 0;
-			  RD3 = 0;
-			  RD2 = 1;
-			  PORTC = arr[b];
-		      __delay_ms(30);
-			}
-		}
-		__delay_ms(1000);
-		
-		for(k=0; k<=13; k++)
-		{
-			for(c=7; c>=0; c--)
-			{
-				RD5 = 0;
-				RD4 = 0;
-				RD3 = 0;
-				RD2 = 1;
-				PORTC = arr[c];
-				__delay_ms(30);
-			}
-		}
-		__delay_ms(1000);
-		
-		for(k=0; k<=50; k++)
-		{
-			for(l=0; l<=8; l++)
-			{
-				RD5 = 0;
-				RD4 = 0;
-				RD3 = 0;
-				RD2 = 1;
-				PORTC = arr[l];
-				__delay_ms(30);
-			}
-		}
-		__delay_ms(1000);
-		
-		for(k=0; k<=50; k++)
-		{
-			for(f=7; f>=0; f--)
-			{
-				RD5 = 0;
-				RD4 = 0;
-				RD3 = 0;
-				RD2 = 1;
-				PORTC = arr[f];
-				__delay_ms(30);
-			}
-		}
-		__delay_ms(3000);
+	  }
+	  __delay_ms(1000);
+				
+	 for(k=0; k<=13; k++)
+	 {
+		 for(b=0; b<=8; b++)
+		 {
+		        RD5 = 0;
+		        RD4 = 0;
+			RD3 = 0;
+			RD2 = 1;
+			PORTC = arr[b];
+		        __delay_ms(30);
+		  }
 	}
-}
+	__delay_ms(1000);
 		
+	for(k=0; k<=13; k++)
+	{
+		 for(c=7; c>=0; c--)
+		  {
+			RD5 = 0;
+			RD4 = 0;
+			RD3 = 0;
+			RD2 = 1;
+			PORTC = arr[c];
+			__delay_ms(30);
+		  }
+	}
+	__delay_ms(1000);
+		
+	for(k=0; k<=50; k++)
+	{
+		for(l=0; l<=8; l++)
+		{
+			RD5 = 0;
+			RD4 = 0;
+			RD3 = 0;
+			RD2 = 1;
+			PORTC = arr[l];
+			__delay_ms(30);
+		}
+	}
+	__delay_ms(1000);
+		
+	for(k=0; k<=50; k++)
+	{
+		for(f=7; f>=0; f--)
+		{
+			RD5 = 0;
+			RD4 = 0;
+			RD3 = 0;
+			RD2 = 1;
+			PORTC = arr[f];
+			__delay_ms(30);
+		}
+	}
+	__delay_ms(3000);
+	}
+}		
