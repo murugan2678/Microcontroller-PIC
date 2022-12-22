@@ -1,5 +1,5 @@
 /*************************************************************************/
-/* Auther       : Murugan M                                   	  	     */
+/* Auther       : Murugan M                                   	  	 */
 /* Date         : 5/12/2022                                 	         */
 /* File name    : stepper motor half route and reverse route led blink   */
 /* Description  : using for loop                                         */
@@ -22,61 +22,61 @@ int main()
 	
 	while(1)
 	{
-		for(k=0; k<=12; k++)                       //half route 
+	  for(k=0; k<=12; k++)                       //half route 
+	  {
+		for(i=0; i<=8; i++)
 		{
-			for(i=0; i<=8; i++)
-			{
-				RD5 = 1;                           //first led blink 
-				RD4 = 0;
-				RD3 = 0;
-				RD2 = 0;
-				PORTC = arr[i];
-				__delay_ms(30);
-			}
+		     RD5 = 1;                        //first led blink 
+		     RD4 = 0;
+		     RD3 = 0;
+		     RD2 = 0;
+		     PORTC = arr[i];
+		     __delay_ms(30);
 		}
-		__delay_ms(1000);
+	   }
+	   __delay_ms(1000);
 	    
 	  for(k=0; k<=12; k++)
 	  {
-		  for(j=0; j<=8; j++)
-		  {
-			  RD5 = 0;
-			  RD4 = 1;                            //second led blink
-			  RD3 = 0;
-			  RD2 = 0;
-			  PORTC = arr[j];
-			  __delay_ms(30);
-			}
-		}
-		__delay_ms(1000);
-		
-		for(k=0; k<=13; k++)
+		for(j=0; j<=8; j++)
 		{
-			for(m=0; m<=8; m++)
-			{
-				RD5 = 0;
-				RD4 = 0;
-				RD3 = 1;                          //third led blink
-				RD2 = 0;
-				PORTC = arr[m];
-				__delay_ms(30);
-			}
+		     RD5 = 0;
+		     RD4 = 1;                        //second led blink
+	             RD3 = 0;
+		     RD2 = 0;
+		     PORTC = arr[j];
+		     __delay_ms(30);
 		}
-		__delay_ms(1000);
+	   }
+	   __delay_ms(1000);
 		
-		for(k=0; k<=13; k++)
-		{
-			for(n=0; n<=8; n++)
-			{
-				RD5 = 0;
-				RD4 = 0;
-				RD3 = 0;
-				RD2 = 1;                          //fourth led blink
-				PORTC = arr[n];
-				__delay_ms(30);
-			}
+	   for(k=0; k<=13; k++)
+	   {
+		for(m=0; m<=8; m++)
+	        {
+		     RD5 = 0;
+		     RD4 = 0;
+		     RD3 = 1;                        //third led blink
+		     RD2 = 0;
+		     PORTC = arr[m];
+		     __delay_ms(30);
 		}
-		__delay_ms(3000);
+	   }
+	   __delay_ms(1000);
+		
+	   for(k=0; k<=13; k++)
+	   {
+	         for(n=0; n<=8; n++)
+		 {
+		      RD5 = 0;
+		      RD4 = 0;
+		      RD3 = 0;
+		      RD2 = 1;                       //fourth led blink
+		      PORTC = arr[n];
+		      __delay_ms(30);
+		  }
+	    }
+	    __delay_ms(3000);
 	}
 }
 		
