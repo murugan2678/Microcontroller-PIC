@@ -1,9 +1,9 @@
-/**************************************************************************/
-/* Auther       : Murugan M                                               */
-/* Date         : 26/1/2023                                               */
-/* File name    : I2C inter integrater circuit                            */
-/* Description  : master_mode for I2C                                     */
-/**************************************************************************/
+/****************************************************************************************/
+/* Auther       : Murugan M                                               		*/
+/* Date         : 26/1/2023                                               		*/
+/* File name    : I2C inter integrater circuit protocol                                 */
+/* Description  : master_mode for I2C protocol using the oscilloscope data and clock    */
+/****************************************************************************************/
 
 
 
@@ -78,20 +78,20 @@ void uart_init()
 }
 void uart_print(unsigned char data)
 {
-			TXREG = data;             //transmit data
-			while(TXIF == 0);         //transmit buffer
-			TXIF = 0;
+    TXREG = data;             //transmit data
+    while(TXIF == 0);         //transmit buffer
+    TXIF = 0;
 }
     
 int main()
 {
-	uart_init();               
-	delay();                            //first delay set 
-	print("usart initilized....\r\n");  //uart print
-	i2c_init();                         //user value initiliase
-	i2c_start();                        //start
-	i2c_write(0X78);                    //this your address and data
-	i2c_stop();                         //stop
+    uart_init();               
+    delay();                            //first delay set 
+    print("usart initilized....\r\n");  //uart print
+    i2c_init();                         //user value initiliase
+    i2c_start();                        //start
+    i2c_write(0X01);                    //this your address and data
+    i2c_stop();                         //stop
     while(1);
 }
 void print(unsigned char *d)
