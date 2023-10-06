@@ -1,0 +1,92 @@
+/**********************/
+/* Author : Murugan M */
+/* Date   : 15oct23   */
+/**********************/
+
+github command how to uploade the folder and file
+
+step 1 : murugan@HP:~$ sudo apt install git
+step 2 : murugan@HP:~$ cd Github/
+step 3 : murugan@HP:~/Github$ cd Microcontroller-PIC/
+step 4 : murugan@HP:~/Github$ git clone https://github.com/murugan2678/Microcontroller-PIC.git
+step 5 : murugan@HP:~/Github/Microcontroller-PIC$ git add led_matrix_8x8/
+step 6 : murugan@HP:~/Github/Microcontroller-PIC$ git commit -m "8x8_led_matrix"
+step 7 : murugan@HP:~/Github/Microcontroller-PIC$ git config --global user.email "muruganm2947@gmail.com"
+step 8 : murugan@HP:~/Github/Microcontroller-PIC$ git config --global user.name "murugan2678"
+step 9 : murugan@HP:~/Github/Microcontroller-PIC$ git commit -m "8x8_led_matrix"
+step 10 : murugan@HP:~/Github/Microcontroller-PIC$ git push origin
+
+
+murugan@HP:~$ cd Github/
+murugan@HP:~/Github$ 
+murugan@HP:~/Github$ 
+
+murugan@HP:~/Github$ git clone https://github.com/murugan2678/Microcontroller-PIC.git
+
+Cloning into 'Microcontroller-PIC'...
+remote: Enumerating objects: 121, done.
+remote: Counting objects: 100% (121/121), done.
+remote: Compressing objects: 100% (93/93), done.
+remote: Total 121 (delta 51), reused 57 (delta 18), pack-reused 0
+Receiving objects: 100% (121/121), 35.40 KiB | 1.77 MiB/s, done.
+Resolving deltas: 100% (51/51), done.
+
+murugan@HP:~/Github$ ls
+Microcontroller-PIC
+
+murugan@HP:~/Github$ cd Microcontroller-PIC/
+
+murugan@HP:~/Github/Microcontroller-PIC$ ls
+'7seg anode and cathode'  'led blinking'   'stepper motor'
+ gsm                       led_matrix_8x8  'stop watch and seconds'
+'I2C protocol'             README.md       'switch button'
+ keypad                    sensor          'timer 1-16bit controller'
+ lcd                      'spi protocol'    uart
+ 
+murugan@HP:~/Github/Microcontroller-PIC$ git add led_matrix_8x8/
+
+murugan@HP:~/Github/Microcontroller-PIC$ git commit -m "8x8_led_matrix"
+
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+murugan@HP:~/Github/Microcontroller-PIC$ git commit -m "8x8_led_matrix"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+murugan@HP:~/Github/Microcontroller-PIC$ git config --global user.email "muruganm2947@gmail.com"
+murugan@HP:~/Github/Microcontroller-PIC$ git config --global user.name "murugan2678"
+
+murugan@HP:~/Github/Microcontroller-PIC$ git commit -m "8x8_led_matrix"
+
+[main 7b11f3a] 8x8_led_matrix
+ 2 files changed, 178 insertions(+)
+ create mode 100644 led_matrix_8x8/digit_0to9_8x8_led.c
+ create mode 100644 led_matrix_8x8/digit_0to9_character_AtoZ.c
+ 
+murugan@HP:~/Github/Microcontroller-PIC$ git push origin
+
+Username for 'https://github.com': murugan2678
+Password for 'https://murugan2678@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.17 KiB | 2.17 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/murugan2678/Microcontroller-PIC.git
+7986ea6..7b11f3a  main -> main
+
+murugan@HP:~/Github/Microcontroller-PIC$ ls
+
+'7seg anode and cathode'   keypad          led_matrix_8x8  'spi protocol'            'switch button'
+ gsm                       lcd             README.md       'stepper motor'           'timer 1-16bit controller'
+'I2C protocol'            'led blinking'   sensor          'stop watch and seconds'   uart
+murugan@HP:~/Github/Microcontroller-PIC$ 
+
