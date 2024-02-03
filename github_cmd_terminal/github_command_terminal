@@ -72,7 +72,7 @@ Delta compression using up to 4 threads
 Compressing objects: 100% (5/5), done.
 Writing objects: 100% (5/5), 2.17 KiB | 2.17 MiB/s, done.
 Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: Resolving deltas: 100% (2/2), completed with 1  local object.
 To https://github.com/murugan2678/Microcontroller-PIC.git
 7986ea6..7b11f3a  main -> main
 
