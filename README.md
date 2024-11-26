@@ -1,2 +1,2 @@
 # Microcontroller-PIC
-PIC16f877a
+PIC16F877A
